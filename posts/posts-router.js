@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
-    const posts = await db.find(req.query);
+    const posts = await db.find();
     res.status(200).json(posts);
   } catch (error) {
     res.status(500).json({
