@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const post = await db.findById(req.params.id);
-    if (post) {
+    if (post.length > 0) {
       res.status(200).json(post);
     } else {
       res

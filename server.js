@@ -8,8 +8,8 @@ server.use(bodyParser.urlencoded({extended: false}));
 
 server.get('/', (req, res) => {
   res.send(`
-  <h2>Lambda Posts API</h>
-  <p>Welcome to the Lambda Posts API</p>`);
+  <h2>Posts API</h>
+  <p>Posts API</p>`);
 });
 
 server.use('/api/posts', postsRouter);
